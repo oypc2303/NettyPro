@@ -6,6 +6,13 @@ import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * <p>https://www.bilibili.com/video/BV1DJ411m7NR?p=6</p>
+ *
+ * @param
+ * @return 
+ * @author pcoy 2020/7/9 11:02
+ */
 public class BIOServer {
     public static void main(String[] args) throws Exception {
 
