@@ -5,6 +5,13 @@ import java.io.FileInputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
+/**
+ * <p>https://www.bilibili.com/video/BV1DJ411m7NR?p=14</p>
+ *
+ * @param
+ * @return 
+ * @author pcoy 2020/7/9 15:53
+ */
 public class NIOFileChannel02 {
     public static void main(String[] args) throws Exception {
 

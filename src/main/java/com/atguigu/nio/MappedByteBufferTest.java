@@ -4,13 +4,16 @@ import java.io.RandomAccessFile;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
-/*
-说明
-1. MappedByteBuffer 可让文件直接在内存(堆外内存)修改, 操作系统不需要拷贝一次
+/**
+ * <p>https://www.bilibili.com/video/BV1DJ411m7NR?p=18</p>
+ * 说明
+ * 1. MappedByteBuffer 可让文件直接在内存(堆外内存)修改, 操作系统不需要拷贝一次
+ * @param
+ * @return
+ * @author pcoy 2020/7/9 16:23
  */
 public class MappedByteBufferTest {
     public static void main(String[] args) throws Exception {
-
         RandomAccessFile randomAccessFile = new RandomAccessFile("1.txt", "rw");
         //获取对应的通道
         FileChannel channel = randomAccessFile.getChannel();
@@ -26,7 +29,7 @@ public class MappedByteBufferTest {
 
         mappedByteBuffer.put(0, (byte) 'H');
         mappedByteBuffer.put(3, (byte) '9');
-        mappedByteBuffer.put(5, (byte) 'Y');//IndexOutOfBoundsException
+//        mappedByteBuffer.put(5, (byte) 'Y');//IndexOutOfBoundsException
 
         randomAccessFile.close();
         System.out.println("修改成功~~");

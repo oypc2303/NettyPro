@@ -2,6 +2,13 @@ package com.atguigu.nio;
 
 import java.nio.IntBuffer;
 
+/**
+ * <p>https://www.bilibili.com/video/BV1DJ411m7NR?p=9</p>
+ *
+ * @param
+ * @return 
+ * @author pcoy 2020/7/9 13:55
+ */
 public class BasicBuffer {
     public static void main(String[] args) {
 
@@ -19,8 +26,7 @@ public class BasicBuffer {
             intBuffer.put( i * 2);
         }
 
-        //如何从buffer读取数据
-        //将buffer转换，读写切换(!!!)
+
         /*
         public final Buffer flip() {
         limit = position; //读数据不能超过5
@@ -29,6 +35,9 @@ public class BasicBuffer {
         return this;
     }
          */
+
+        //如何从buffer读取数据
+        //将buffer转换，读写切换(!!!)
         intBuffer.flip();
         intBuffer.position(1);//1,2
         System.out.println(intBuffer.get());

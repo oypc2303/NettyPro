@@ -9,6 +9,11 @@ import java.util.concurrent.Executors;
 /**
  * <p>https://www.bilibili.com/video/BV1DJ411m7NR?p=6</p>
  *
+ *  打开cmd  建立连接
+ *  依次输入 telnet 127.0.0.1 6666
+ *  Ctrl + 】
+ *  send hello
+ *
  * @param
  * @return 
  * @author pcoy 2020/7/9 11:02
@@ -34,11 +39,13 @@ public class BIOServer {
             System.out.println("线程信息 id =" + Thread.currentThread().getId() + " 名字=" + Thread.currentThread().getName());
             //监听，等待客户端连接
             System.out.println("等待连接....");
+            //todo 会阻塞
             final Socket socket = serverSocket.accept();
             System.out.println("连接到一个客户端");
 
             //就创建一个线程，与之通讯(单独写一个方法)
             newCachedThreadPool.execute(new Runnable() {
+                @Override
                 public void run() { //我们重写
                     //可以和客户端通讯
                     handler(socket);
@@ -65,6 +72,7 @@ public class BIOServer {
                 System.out.println("线程信息 id =" + Thread.currentThread().getId() + " 名字=" + Thread.currentThread().getName());
 
                 System.out.println("read....");
+                //todo 会阻塞
                int read =  inputStream.read(bytes);
                if(read != -1) {
                    System.out.println(new String(bytes, 0, read

@@ -7,8 +7,13 @@ import java.nio.channels.SocketChannel;
 import java.util.Arrays;
 
 /**
+ * <p>https://www.bilibili.com/video/BV1DJ411m7NR?p=19</p>
+ *
  * Scattering：将数据写入到buffer时，可以采用buffer数组，依次写入  [分散]
  * Gathering: 从buffer读取数据时，可以采用buffer数组，依次读
+ * @param
+ * @return
+ * @author pcoy 2020/7/9 16:45
  */
 public class ScatteringAndGatheringTest {
     public static void main(String[] args) throws Exception {

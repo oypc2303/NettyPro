@@ -4,9 +4,16 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.nio.channels.FileChannel;
 
+/**
+ * <p>https://www.bilibili.com/video/BV1DJ411m7NR?p=16</p>
+ *
+ * @param
+ * @return 
+ * @author pcoy 2020/7/9 16:06
+ */
 public class NIOFileChannel04 {
-    public static void main(String[] args)  throws Exception {
 
+    public static void main(String[] args)  throws Exception {
         //创建相关流
         FileInputStream fileInputStream = new FileInputStream("d:\\a.jpg");
         FileOutputStream fileOutputStream = new FileOutputStream("d:\\a2.jpg");

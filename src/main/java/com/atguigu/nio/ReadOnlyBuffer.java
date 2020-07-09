@@ -2,6 +2,13 @@ package com.atguigu.nio;
 
 import java.nio.ByteBuffer;
 
+/**
+ * <p>https://www.bilibili.com/video/BV1DJ411m7NR?p=17</p>
+ *
+ * @param
+ * @return 
+ * @author pcoy 2020/7/9 16:13
+ */
 public class ReadOnlyBuffer {
     public static void main(String[] args) {
 
